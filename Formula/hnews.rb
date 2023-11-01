@@ -10,38 +10,38 @@ class Hnews < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/my-resume-cli_Darwin_arm64.tar.gz"
-      sha256 "fa3e6d3045072c9602d436639a7cca8f7065669c4fbd3d405c9dc7b03cade860"
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/lucas-cli_Darwin_arm64.tar.gz"
+      sha256 "3c34e756b19ff88922c6eb4c39a3c7aae107e9bf0371ccb87c67796f7f362e61"
 
       def install
-        bin.install "my-resume-cli"
+        bin.install "lucas-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/my-resume-cli_Darwin_x86_64.tar.gz"
-      sha256 "c02355a1d41fd3f9fed00376ae881e3edad9dcadd3bb2e5dcaf56ddc634ddcc5"
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/lucas-cli_Darwin_x86_64.tar.gz"
+      sha256 "61fd10dc31ab955a8eeb911de4a0c1b250657b912421f9401b1c215faca95b6c"
 
       def install
-        bin.install "my-resume-cli"
+        bin.install "lucas-cli"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/my-resume-cli_Linux_x86_64.tar.gz"
-      sha256 "85a07467ba5b03494357041c19801d1ba8c45bd0b43d460778567a4112efcb6f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/lucas-cli_Linux_arm64.tar.gz"
+      sha256 "81d9f4912c73337cebda6d1a8bfa120baaddd6b0eb4d538022600a2834138331"
 
       def install
-        bin.install "my-resume-cli"
+        bin.install "lucas-cli"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/my-resume-cli_Linux_arm64.tar.gz"
-      sha256 "c59f84016c23b71987f5dd663cf2a610bd70c9fc37d5a8e794ea8cb2bc0df5b3"
+    if Hardware::CPU.intel?
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.1.0/lucas-cli_Linux_x86_64.tar.gz"
+      sha256 "318b975d8ea764211b2ef4847080c4c66620e7428f88f023f56c44a29390b75e"
 
       def install
-        bin.install "my-resume-cli"
+        bin.install "lucas-cli"
       end
     end
   end
