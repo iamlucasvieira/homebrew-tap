@@ -5,21 +5,21 @@
 class LucasCli < Formula
   desc "My resume in CLI version>"
   homepage "https://github.com/iamlucasvieira/my-resume-cli"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.0/lucas-cli_Darwin_arm64.tar.gz"
-      sha256 "7522572cc1aae755362a0cf9ae32bc9dcd735a7c7176cc40d72c3891949aa44c"
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.1/lucas-cli_Darwin_arm64.tar.gz"
+      sha256 "89b9816c40681827967a97073f6dc736e8af07db096e023383a2977d41ed3363"
 
       def install
         bin.install "lucas-cli"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.0/lucas-cli_Darwin_x86_64.tar.gz"
-      sha256 "711fbcb223cc432d18646163acc32e9c03ac1cb52599d95fb6e7f1ed7fb56e8c"
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.1/lucas-cli_Darwin_x86_64.tar.gz"
+      sha256 "23f2ab0ad2984656a3769f927fa274a8083c68ca34f911d9e6aaa7e9434bd60b"
 
       def install
         bin.install "lucas-cli"
@@ -29,16 +29,16 @@ class LucasCli < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.0/lucas-cli_Linux_x86_64.tar.gz"
-      sha256 "acc419802847bb4d87c50000246cb58fe81bd81e4409e45796f422ef784f7dfd"
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.1/lucas-cli_Linux_x86_64.tar.gz"
+      sha256 "44b7b0b6f953d9c4ec31ac98712644111dd5550df7c2cc2dd2998d8594d2ea8a"
 
       def install
         bin.install "lucas-cli"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.0/lucas-cli_Linux_arm64.tar.gz"
-      sha256 "3c132b64a28b37a70f31d5ae8ce3940b9094de422e6663877d95f6a69cbde8a6"
+      url "https://github.com/iamlucasvieira/my-resume-cli/releases/download/v0.2.1/lucas-cli_Linux_arm64.tar.gz"
+      sha256 "e4fb33f19c7d00050ea6357b8a07076d7852ebd920cd98f47edd3824299d7419"
 
       def install
         bin.install "lucas-cli"
