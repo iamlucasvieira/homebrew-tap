@@ -5,21 +5,21 @@
 class Ct < Formula
   desc "Easy commit templates."
   homepage "https://github.com/iamlucasvieira/ComTemplate"
-  version "1.0"
+  version "0.1"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Darwin_arm64.tar.gz"
-      sha256 "2d1ad2c3a2e5e860204c2ec1c811666c0ad6203addde9b04bdccfe63d865ebd7"
+    if Hardware::CPU.intel?
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Darwin_x86_64.tar.gz"
+      sha256 "2004876d17df53861aa42ae77c8f56e204c98428687c5768091bd6fa3d1bcd8a"
 
       def install
         bin.install "ct"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Darwin_x86_64.tar.gz"
-      sha256 "28b40078a5fd07ce3d6af486c4b114d7f858d2ab450ef16ee7f8b80abe391f79"
+    if Hardware::CPU.arm?
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Darwin_arm64.tar.gz"
+      sha256 "8bca0045d950e8c02bb8bd7bac8544bc65f6a227208627c1b7c9089e52f2d1d5"
 
       def install
         bin.install "ct"
@@ -29,16 +29,16 @@ class Ct < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Linux_arm64.tar.gz"
-      sha256 "fc7c6a7ca0eb4f33a02bfacb1f78c91bac9abcd86d6567ad104009004d3bf313"
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Linux_arm64.tar.gz"
+      sha256 "a2b3d9b8f0afbc06cc80b04cca1eaa502e4401dba728b3ef009aa5731c4a9640"
 
       def install
         bin.install "ct"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Linux_x86_64.tar.gz"
-      sha256 "4b75e5004ee10656e136f85c5a36c0abf0847d16a4b4030c5e57afa3762a7916"
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Linux_x86_64.tar.gz"
+      sha256 "b1ad09d16894f15e1247f85e4095cb0dd9029b9525274ef7c7cd991a8082f91e"
 
       def install
         bin.install "ct"
