@@ -9,39 +9,39 @@ class Ct < Formula
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ComTemplate_Darwin_arm64.tar.gz"
-      sha256 "39940ce232e8cf8aae6f64ea8e321bf6e5b7d9554e77cf7b20ab0df6c105c662"
+    if Hardware::CPU.intel?
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Darwin_x86_64.tar.gz"
+      sha256 "6129e53554aa7dd9b30b47f7f2ac62b5510f3d4205b981d9b07156b0d2214093"
 
       def install
-        bin.install "ComTemplate"
+        bin.install "ct"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ComTemplate_Darwin_x86_64.tar.gz"
-      sha256 "f557882d3987137df1fe277f29d05dc165b4590eb2f69e92164ac7ea47395168"
+    if Hardware::CPU.arm?
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Darwin_arm64.tar.gz"
+      sha256 "65f89156043948142ed71a490301620d683bc7ad440256afa66ee4af738d5da4"
 
       def install
-        bin.install "ComTemplate"
+        bin.install "ct"
       end
     end
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ComTemplate_Linux_arm64.tar.gz"
-      sha256 "c83e0d71d6238d320613280286932591f88bafcc0f2d3f5d951b070dcdcd950b"
+    if Hardware::CPU.intel?
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Linux_x86_64.tar.gz"
+      sha256 "9c47b4474da3b9c3417669a62805773a07a6719b2896ec84d5b4bce52ab2318f"
 
       def install
-        bin.install "ComTemplate"
+        bin.install "ct"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ComTemplate_Linux_x86_64.tar.gz"
-      sha256 "d7a422fc36fb6af61c5597b174306b7d71be89aeecfcc318c5baeb9e63f474e5"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v1.0/ct_Linux_arm64.tar.gz"
+      sha256 "148434c7810d61e58d4d349217f7b452f8d35a78785fa3902209ddd5494204fe"
 
       def install
-        bin.install "ComTemplate"
+        bin.install "ct"
       end
     end
   end
