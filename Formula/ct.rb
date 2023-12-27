@@ -5,21 +5,21 @@
 class Ct < Formula
   desc "Easy commit templates."
   homepage "https://github.com/iamlucasvieira/ComTemplate"
-  version "0.1"
+  version "0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Darwin_x86_64.tar.gz"
-      sha256 "2004876d17df53861aa42ae77c8f56e204c98428687c5768091bd6fa3d1bcd8a"
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.2/ct_Darwin_x86_64.tar.gz"
+      sha256 "580b51cfc3d43e49fc627bfb26c2dd736b60de38a4edd612172fb6d293ae326e"
 
       def install
         bin.install "ct"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Darwin_arm64.tar.gz"
-      sha256 "8bca0045d950e8c02bb8bd7bac8544bc65f6a227208627c1b7c9089e52f2d1d5"
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.2/ct_Darwin_arm64.tar.gz"
+      sha256 "2b7a4b2558128c3cca6dac5b92cfae3a2f11a6ffe218d7551c1f84ba4e2cee2f"
 
       def install
         bin.install "ct"
@@ -29,16 +29,16 @@ class Ct < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Linux_arm64.tar.gz"
-      sha256 "a2b3d9b8f0afbc06cc80b04cca1eaa502e4401dba728b3ef009aa5731c4a9640"
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.2/ct_Linux_arm64.tar.gz"
+      sha256 "e9e795ed56ec93b203fe80535e23c7d99542bd49c7e7542fb09a6f1871de6078"
 
       def install
         bin.install "ct"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.1/ct_Linux_x86_64.tar.gz"
-      sha256 "b1ad09d16894f15e1247f85e4095cb0dd9029b9525274ef7c7cd991a8082f91e"
+      url "https://github.com/iamlucasvieira/ComTemplate/releases/download/v0.2/ct_Linux_x86_64.tar.gz"
+      sha256 "1b83b00707dac945761a3de1b0033880b852080cce8bb355c53a704b294aedf3"
 
       def install
         bin.install "ct"
